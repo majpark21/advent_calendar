@@ -17,10 +17,6 @@ l_symbols = list(set(np.unique(img)) - set(l_digits + ["."]))
 mask_numbers = np.isin(img, l_digits)
 horiz_filter = np.array([[0,0,0],[1,1,1],[0,0,0]])
 blob_numbers = label(mask_numbers, structure=horiz_filter)[0]
-# Link each label to the associated number
-pos_numbers = {str(label):np.where(blob_numbers==label) for label in np.unique(blob_numbers)}
-pos_numbers.pop("0")
-pos_numbers = {''.join(img[pos_numbers[k]]): pos_numbers[k] for k in pos_numbers.keys()}
 
 # Define a mask for symbol, extract coordinates
 mask_symbols = np.isin(img, l_symbols)
