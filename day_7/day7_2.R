@@ -123,12 +123,6 @@ getRank <- function(arr){
 }
 
 # Apply
-# dt[, s_hand := sortString(hand), by=idx_hand]
-# dt[, n_pair := getNCombi(s_hand, 2), , by=idx_hand]
-# dt[, n_triple := getNCombi(s_hand, 3), by=idx_hand]
-# dt[, n_carre := getNCombi(s_hand, 4), by=idx_hand]
-# dt[, n_penta := getNCombi(s_hand,5), by=idx_hand]
-# dt[, hand_type := getType(n_pair, n_triple, n_carre, n_penta), by=idx_hand]
 dt[, jokerized_hand_type := jokerized_rank(hand), by=idx_hand]
 dt[, rank_inType := getRank(hand), by=jokerized_hand_type]
 
