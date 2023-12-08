@@ -1,5 +1,5 @@
-# in_fi = './example8.txt'
-in_fi = './input8_1.txt'
+in_fi = './example8.txt'
+# in_fi = './input8_1.txt'
 
 d_directions = {'L': 0, 'R': 1}
 start_node = 'AAA'
@@ -17,7 +17,6 @@ n_steps = 0
 while curr_node != 'ZZZ':
     curr_direction = directions[n_steps % len(directions)]
     curr_node = nodes[curr_node][curr_direction]
-    curr_direction = directions
     n_steps += 1
 
 print(n_steps)
