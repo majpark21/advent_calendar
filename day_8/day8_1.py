@@ -1,5 +1,5 @@
-in_fi = './example8.txt'
-# in_fi = './input8_1.txt'
+# in_fi = './example8.txt'
+in_fi = './input8_1.txt'
 
 d_directions = {'L': 0, 'R': 1}
 start_node = 'AAA'
